@@ -6,6 +6,14 @@ import {
 } from "react-icons/ai";
 import Image from "next/image";
 import pfp from "../public/pfp_smaller.jpg"
+import proj1 from "../public/rl_plugin.png"
+import java from "../public/java_logo.png"
+import javaswing from "../public/swing_logo.jpg"
+import html from "../public/html_logo.png"
+import tl from "../public/tailwind_logo.png"
+import js from "../public/js_logo.png"
+import react_logo from "../public/react_logo.png"
+import webpage from "../public/webpage.png"
 
 export default function Home() {
   return (
@@ -19,7 +27,7 @@ export default function Home() {
       <main className='bg-white px-10'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-xl font-burtons'>developedbyKev</h1>
+            <h1 className='text-xl font-burtons'>DevbyKev</h1>
             <ul className='flex items-center'>
               <li><BsFillMoonStarsFill className='cursor-pointer text-2xl'/></li>
               <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-black px-4 py-2 rounded-lg ml-8 font-burtons' href='#'>Resume</a></li>
@@ -37,8 +45,36 @@ export default function Home() {
             <a href="https://github.com/runkev" target='_blank' rel="noopener noreferrer"><AiFillGithub /></a> 
           </div>
           <div>
-            <Image src={pfp} className='mx-auto rounded-full w-60 drop-shadow-2xl' alt='pfp'/>
+            <Image src={pfp} className='mx-auto rounded-full w-60 h-60 drop-shadow-2xl' alt='pfp'/>
           </div>
+
+          <div className='text-center pt-10'>
+            <h3 className='text-2xl'>My Projects</h3>
+          </div>
+
+          <div className='text-center shadow-xl p-8 rounded-xxl my-5'>
+            <h4 className='text-lg font-medium pt-8 pb-2'>RuneLite Plugin</h4>
+            <a  href="https://github.com/runkev/fight-cave-helper" target='_blank' rel="noopener noreferrer">
+              <Image src={proj1} width={200} alt="plugin" className='mx-auto cursor-pointer drop-shadow 2x1'/>
+            </a>
+            <div className='flex justify-center py-5 space-x-10'>
+              <Image src={java} width={30} alt="java logo" />
+              <Image src={javaswing} width={80} alt="swing logo"/>
+            </div>
+          </div>
+
+          <div className='text-center shadow-xl p-8 rounded-xxl my-5'>
+            <h4 className='text-lg font-medium pt-8 pb-2'>This Web Page!</h4>
+            <a  href="https://github.com/runkev/runkev.github.io" target='_blank' rel="noopener noreferrer">
+              <Image src={webpage} width={200} alt="plugin" className='mx-auto cursor-pointer drop-shadow 2x1'/>
+            </a>
+            <div className='flex justify-center py-5 space-x-5'>
+              <Image src={react_logo}  alt="react logo" className='w-12'/>
+              <Image src={html}  alt="html logo"        className='w-12'/>
+              <Image src={tl}  alt="tailwind logo"      className='w-12'/>
+            </div>
+          </div>
+
         </section>
       </main>
 
